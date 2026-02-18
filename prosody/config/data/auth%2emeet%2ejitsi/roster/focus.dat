@@ -1,0 +1,11 @@
+return {
+	[false] = {
+		["version"] = 3;
+		["pending"] = {};
+	};
+	["focus.video.onesolutions.net"] = {
+		["groups"] = {};
+		["ask"] = "subscribe";
+		["subscription"] = "from";
+	};
+};
