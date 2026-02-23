@@ -1,0 +1,14 @@
+=== saslauthd.conf
+ldap_servers: ldap://dc01.corp.local
+ldap_search_base: DC=corp,DC=local
+ldap_filter: (sAMAccountName=%u)
+ldap_bind_dn: CN=binduser,OU=Service Accounts,DC=corp,DC=local
+ldap_password: binduserpassword
+ldap_start_tls: yes        # if using LDAPS
+ldap_auth_method: bind
+
+=== prosody.cfg.lua
+authentication = "cyrus"
+cyrus_sasl = {
+    saslauthd_path = "/var/run/saslauthd/mux"
+}
